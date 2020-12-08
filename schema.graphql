@@ -1,0 +1,47 @@
+type _Approval @entity {
+  id: ID!
+  count: BigInt!
+  owner: Bytes! # address
+  spender: Bytes! # address
+  value: BigInt!
+}
+
+type _DefaultPositionUnitEdited @entity {
+  id: ID!
+  count: BigInt!
+  _component: Bytes! # address
+  _realUnit: BigInt!
+}
+
+type _ExternalPositionDataEdited @entity {
+  id: ID!
+  count: BigInt!
+  _component: Bytes! # address
+  _data: Bytes!
+  _positionModule: Bytes! # address
+}
+
+type _ExternalPositionUnitEdited @entity {
+  id: ID!
+  count: BigInt!
+  _component: Bytes! # address
+  _realUnit: BigInt!
+  _positionModule: Bytes! # address
+}
+
+type _Invoked @entity {
+  id: ID!
+  count: BigInt!
+  _target: Bytes! # address
+  _value: BigInt!
+  _data: Bytes!
+  _returnValue: Bytes!
+}
+
+type _Transfer @entity {
+  id: ID!
+  count: BigInt!
+  from: Bytes! # address
+  to: Bytes! # address
+  value: BigInt!
+}
